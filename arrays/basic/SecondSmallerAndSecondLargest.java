@@ -10,7 +10,7 @@ Problem Link : https://takeuforward.org/data-structure/find-second-smallest-and-
 *
 * * */
 
-@Run
+
 public class SecondSmallerAndSecondLargest implements ArrayProblem {
     @Override
     public String getProblemTitle() {

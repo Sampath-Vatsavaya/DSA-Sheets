@@ -17,7 +17,7 @@ Note: An array A rotated by x positions results in an array B of the same length
 * Babbar (My Approach): https://youtu.be/Z7_nMTHROZo?si=jlsabnTUvTZuje47
 *
 *  */
-@Run
+
 public class CheckIfArrayIsSortedAndRotated implements ArrayProblem {
     @Override
     public String getProblemTitle() {

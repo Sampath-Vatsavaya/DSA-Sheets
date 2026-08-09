@@ -26,9 +26,10 @@ Output: [3,99,-1,-100]
 Explanation:
 rotate 1 steps to the right: [99,-1,-100,3]
 rotate 2 steps to the right: [3,99,-1,-100]
+* Babbar (My Approach): https://youtu.be/Z7_nMTHROZo?si=jlsabnTUvTZuje47
 *
 * */
-@Run
+
 public class RotateArray implements ArrayProblem {
     @Override
     public String getProblemTitle() {
@@ -63,6 +64,7 @@ public class RotateArray implements ArrayProblem {
     Complexity
     Time Complexity: O(n) (each element reversed at most twice)
     Space Complexity: O(1)
+    * https://leetcode.com/problems/rotate-array/solutions/7184902/brute-force-to-optimised-approach-java-p-z4yy/
     * */
 
     public void rotateOptimised(int[] nums, int k) {
