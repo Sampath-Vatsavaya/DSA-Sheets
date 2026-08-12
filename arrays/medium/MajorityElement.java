@@ -21,7 +21,7 @@ Output: 2
 *
 *
 * */
-@Run
+
 public class MajorityElement implements ArrayProblem {
     @Override
     public String getProblemTitle() {
