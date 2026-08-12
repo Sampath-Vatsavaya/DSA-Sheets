@@ -122,6 +122,11 @@ When both the negIndex and posIndex exceed the size of the array, we see that th
 
     @Override
     public void solve() {
+        int[] A = {1, 2, -4, -5};
+        int[] result = rearrangeArrayOptimalTime(A);
 
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
     }
 }
