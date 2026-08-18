@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class SortingAlgo {
 
@@ -113,12 +115,66 @@ Continue this process until the entire array is sorted.
         }
     }
 
+
+    private static void mergeSort(int[] arr , int low , int high)
+    {
+        if(low>=high)
+        {
+            return;
+        }
+        int mid = (low+high)/2;
+        mergeSort(arr,low,mid);
+        mergeSort(arr,mid+1,high);
+        merge(arr,low,mid,high);
+    }
+
+    private static void merge(int[] arr,int low,int mid,int high)
+    {
+
+        int left = low;
+        int right = mid+1;
+        List<Integer> temp = new ArrayList<Integer>();
+
+        while(left<=mid && right<=high )
+        {
+            if(arr[left]<arr[right])
+            {
+                temp.add(arr[left]);
+                left++;
+            }
+            else{
+                temp.add(arr[right]);
+                right++;
+            }
+        }
+
+        while(left<=mid)
+        {
+            temp.add(arr[left]);
+            left++;
+
+        }
+        while(right<=high)
+        {
+            temp.add(arr[right]);
+            right++;
+        }
+
+        for (int i = low; i <= high; i++)
+        { arr[i] = temp.get(i - low); }
+
+
+    }
+
+
     static void main() {
 
         int[] arrSel = {13, 46, 24, 52, 20, 9};
         int[] arrBubble1 = {13, 46, 24, 52, 20, 9};
         int[] arrBubble2 = {13, 46, 24, 52, 20, 9};
         int[] arrIns = {13, 46, 24, 52, 20, 9};
+        int[] arrMerge = {3,6,7,9,1,2,5,8,4,12,10,29,34};
+
 
         System.out.println("Selection Sort");
         selectionSort(arrSel);
@@ -134,6 +190,10 @@ Continue this process until the entire array is sorted.
         System.out.println("Insertion Sort");
         insertionSort(arrIns);
         System.out.println(Arrays.toString(arrIns));
+
+        System.out.println("Merge Sort");
+        mergeSort(arrMerge,0,arrMerge.length-1);
+        System.out.println(Arrays.toString(arrMerge));
 
     }
 
